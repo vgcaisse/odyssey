@@ -1,38 +1,77 @@
 .App {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #9101f6 70%, #48ca98 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error {
+  color: red;
+  margin-top: 2%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.milestoneMessages {
+  color: green
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.container {
+  background: #fff;
+  padding: 5%;
+  border-radius: 5%;
+  border-image: linear-gradient(to bottom, #48ca98 70%, #9101f6 100%);
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to bottom, #48ca98 70%, #9101f6 100%);
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.container h1,
+.container p {
+  text-align: center;
+}
+
+.form-group {
+  display: grid;
+  gap: 2%;
+}
+
+label {
+  justify-self: start;
+}
+
+input[type="date"],
+input[type="number"] {
+  margin-bottom: 2%;
+  width: 100%;
+  padding: 2%;
+}
+
+.pink-gradient-border {
+  background: linear-gradient(to bottom, #48ca98 70%, #9101f6 100%);
+  border-radius: 5%;
+  padding: 5%;
+  border: 2px solid;
+  border-image: linear-gradient(to bottom, #48ca98 70%, #9101f6 100%);
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to bottom, #48ca98 70%, #9101f6 100%);
+}
+
+.pink-gradient-border h1,
+.pink-gradient-border p {
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media screen and (max-width: 360px) {
+  .container {
+    width: 95%;
   }
 }
